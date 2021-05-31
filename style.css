@@ -1,0 +1,79 @@
+html {
+    background-color: #343a40;
+    padding: 200px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    background-color: black;
+    padding: 10px;
+}
+#site-logo {
+    width: 100px;
+}
+
+nav > a {
+    color: red;
+    padding: 7px;
+    font-size: x-large;
+}
+
+nav > a:hover {
+    padding: 10px;
+    color: white;
+    background-color: #464d55;;
+}
+
+nav > a:visted {
+    color: pink ;
+}
+
+nav > a:link {
+    font-weight: bold;
+}
+
+main p:hover {
+    color: #fbb1bd;
+}
+
+#family-experience {
+    color: white;
+}
+
+#family-experience:active {
+    font-size: 1.3em ;
+}
+
+#family-experience:visited {
+    color: rgb(172, 96, 172);
+}
+
+#blog {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+#blog {
+    border: 2px white solid;
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#blog-photo {
+    border: 2px white solid;
+    height: 600px;
+}
+
+h3 + p {
+    color: cornsilk;
+}
+
+
+
+
