@@ -1,41 +1,110 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 html {
     background-color: #343a40;
-    padding: 200px;
     color: white;
     font-family: 'Playfair Display', serif;
 }
 
+body {
+    position: relative;
+}
+
 header {
     background-color: black;
-    padding: 10px;
-}
-#site-logo {
-    width: 100px;
+    position: sticky;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 1fr repeat(6,0.8fr) 2fr;
+    justify-items: center;
+    align-items: center;
+    height: 10vh;
 }
 
-nav > a {
+#site-logo {
+    width: 90px;
+}
+
+header a {
     color: red;
     padding: 7px;
-    font-size: x-large;
+    font-size: 1.2em;
 }
 
-nav > a:hover {
+header a:hover {
     padding: 10px;
     color: white;
     background-color: #464d55;;
 }
 
-nav > a:visted {
+header a:visted {
     color: pink ;
 }
 
-nav > a:link {
+header a:link {
     font-weight: bold;
 }
 
-main p:hover {
-    color: #fbb1bd;
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "title-text title-text"
+        "about about"
+        "site-video site-video"
+        "blog-photo blog-content";
+    height: 100%;
+    align-items: center;
+    justify-items: center;
 }
+
+#title-text {
+    grid-area: title-text;
+    height: 10vh;
+    padding-top: 50px;
+}
+
+#about {
+    grid-area: about;
+    height: 80vh;
+    width: 65vw;
+}
+
+#about > #about-us {
+    text-align: center;
+}
+
+#site-video {
+    grid-area: site-video;
+    height: 60vh;
+}
+
+#blog-photo > img {
+    grid-area: blog-photo;  
+    height: 60vh; 
+    width: 100%;
+    object-fit: cover;
+}
+
+#blog-content {
+    grid-area: blog-content;
+    height: 60vh;
+    width: 30vw;
+    align-self: center;
+    font-size: 1.3em; 
+}
+
+#blog-content > h2 {
+    color: red;
+}
+
+main p:hover {
+        color: #fbb1bd;
+    }
 
 #family-experience {
     color: white;
@@ -49,31 +118,16 @@ main p:hover {
     color: rgb(172, 96, 172);
 }
 
-#blog {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-
-#blog {
-    border: 2px white solid;
-    width: 500px;
-    height: 600px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#blog-photo {
-    border: 2px white solid;
-    height: 600px;
-}
-
 h3 + p {
     color: cornsilk;
 }
 
-
-
+footer {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 4fr 5fr 4fr;
+    justify-items: center;
+    align-items: center;
+    height: 20vh;
+}
 
