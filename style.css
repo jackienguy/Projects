@@ -31,13 +31,15 @@ header {
 header a {
     color: red;
     padding: 7px;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 header a:hover {
     padding: 10px;
     color: white;
-    background-color: #464d55;;
+    background-color: #464d55;
+    font-size: 1.3em;
+    transition: color 1s;
 }
 
 header a:visted {
@@ -66,6 +68,14 @@ main {
     grid-area: title-text;
     height: 10vh;
     padding-top: 50px;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+
+@keyframes slide {
+    from {transform: translatey(0)}
+    to {transform: translatey(-100px)}
 }
 
 #about {
@@ -88,6 +98,12 @@ main {
     height: 60vh; 
     width: 100%;
     object-fit: cover;
+}
+
+#blog-photo > img:hover {
+    border: 3px solid white;
+    opacity: 80%;
+    transition: 1s;
 }
 
 #blog-content {
