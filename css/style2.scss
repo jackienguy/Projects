@@ -1,12 +1,14 @@
+@import '_variable';
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
 html {
-    background-color: #343a40;
-    color: white;
-    font-family: 'Playfair Display', serif;
+    background-color: $bk-grd-color;
+    color: $site-font-color;
+    font-family: $site-font-fam;
 }
 
 header {
@@ -14,14 +16,14 @@ header {
     position: sticky;
     top: 0px;
     display: grid;
-    grid-template-columns: 1fr repeat(6,0.8fr) 2fr;
+    grid-template-columns: $grid-temp-col;
     justify-items: center;
     align-items: center;
-    height: 10vh;
+    height: $header-height;
 }
 
 #site-logo {
-    height: 100px;
+    height: $site-logo-width;
 }
 
 header a {

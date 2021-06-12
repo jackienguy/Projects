@@ -1,53 +1,56 @@
+@import '_variable';
+
 * {
     margin: 0px;
     padding: 0px;
 }
 
 html {
-    background-color: #343a40;
-    color: white;
-    font-family: 'Playfair Display', serif;
+    background-color: $bk-grd-color;
+    color: $site-font-color;
+    font-family: $site-font-fam;
 }
 
 body {
     position: relative;
 }
 
+@import '_header';
+
 header {
     background-color: black;
     position: sticky;
     top: 0px;
     display: grid;
-    grid-template-columns: 1fr repeat(6,0.8fr) 2fr;
+    grid-template-columns: $grid-temp-col;
     justify-items: center;
     align-items: center;
-    height: 10vh;
+    height: $header-height;
 }
 
 #site-logo {
-    width: 90px;
+    width: $site-logo-width;
 }
 
-header a {
-    color: red;
-    padding: 7px;
-    font-size: 1.1em;
-}
-
-header a:hover {
-    padding: 10px;
-    color: white;
-    background-color: #464d55;
-    font-size: 1.3em;
-    transition: color 1s;
-}
-
-header a:visted {
-    color: pink ;
-}
-
-header a:link {
-    font-weight: bold;
+header { 
+    a {
+        color: $hd-link-color;
+        padding: $hd-link-pad;
+        font-size: $hd-link-font-size;
+    }
+    & a:hover {
+        padding: 10px;
+        color: white;
+        background-color: #464d55;
+        font-size: 1.3em;
+        transition: color 1s;
+    }
+    & a:visited {
+        color: pink ;
+    }
+    & a:link {
+        font-weight: bold;
+    }
 }
 
 main {
@@ -68,16 +71,8 @@ main {
     grid-area: title-text;
     height: 10vh;
     padding-top: 50px;
-    animation-name: slide;
-    animation-duration: 2s;
-}
-
-
-@keyframes slide {
-    from {transform: translatey(0)}
-    to {transform: translatey(-100px)}
-}
-
+    @mixin animation-welcome-slide();
+    
 #about {
     grid-area: about;
     height: 80vh;
@@ -93,17 +88,18 @@ main {
     height: 60vh;
 }
 
-#blog-photo > img {
-    grid-area: blog-photo;  
-    height: 60vh; 
-    width: 100%;
-    object-fit: cover;
-}
-
-#blog-photo > img:hover {
-    border: 3px solid white;
-    opacity: 80%;
-    transition: 1s;
+#blog-photo { 
+    img {
+        grid-area: blog-photo;  
+        height: 60vh; 
+        width: 100%;
+        object-fit: cover;
+    }
+    & img:hover {
+        border: 3px solid white;
+        opacity: 80%;
+        transition: 1s;
+    }
 }
 
 #blog-content {
@@ -112,10 +108,10 @@ main {
     width: 30vw;
     align-self: center;
     font-size: 1.3em; 
-}
 
-#blog-content > h2 {
-    color: red;
+    h2{
+        color: red;
+    }
 }
 
 main p:hover {
@@ -124,14 +120,12 @@ main p:hover {
 
 #family-experience {
     color: white;
-}
-
-#family-experience:active {
-    font-size: 1.3em ;
-}
-
-#family-experience:visited {
-    color: rgb(172, 96, 172);
+    &:active {
+        font-size: 1.3em ;
+    }
+    &:visited {
+        color: rgb(172, 96, 172);
+    }
 }
 
 h3 + p {
@@ -146,4 +140,3 @@ footer {
     align-items: center;
     height: 20vh;
 }
-
